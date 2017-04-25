@@ -7,11 +7,9 @@ class FundComponent extends React.Component {
 
 	}
 changeProgressWidth(){
-	if(isNaN(this.refs.fundInput.value) || this.refs.fundInput.value === ""){
-		alert("Numeric input allowed !");
-	}
-	else if(parseFloat(this.refs.fundInput.value) + parseFloat(this.props.currentDonation) > 5000){
-		alert("Fund limit left : "+(5000 - parseFloat(this.props.currentDonation)));
+
+	if(parseFloat(this.refs.fundInput.value) + parseFloat(this.props.currentDonation) > this.props.totalFund){
+		alert("Fund limit left : "+(this.props.totalFund - parseFloat(this.props.currentDonation)));
 	}
 	else {
 		this.props.changeProgress(parseFloat(this.refs.fundInput.value));
@@ -23,7 +21,7 @@ changeProgressWidth(){
 		return (
     <div className="fundComponent">
 			<div className="input-box">
-	  		<input className="fundInput" ref="fundInput"/>
+	  		<input type="number" className="fundInput" ref="fundInput"/>
 	  		<span className="unit">$</span>
 			</div>
       <button className="fundSubmit" onClick={this.changeProgressWidth}>Give Now</button>

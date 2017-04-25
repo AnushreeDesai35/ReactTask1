@@ -7,7 +7,10 @@ class ContentContainer extends React.Component {
 		super(props);
 		this.state={
 			currentDonation:0,
-			progressWidth:0
+			progressWidth:0,
+			daysLeft:3,
+			noOfDonors:42,
+			totalFund:5000
 		}
 		this.changeProgress = this.changeProgress.bind(this);
 	}
@@ -20,16 +23,15 @@ class ContentContainer extends React.Component {
 	render() {
 		return (
     <div className="contentContainer">
-    <ProgressBar currentDonation={this.state.currentDonation} progressWidth={this.state.progressWidth}/>
-<pre className="details"><span className="textImp"><strong>{`
-Only 3 days left`}</strong></span>
-  {` to fund this project.
-
-Join the 42 other donors who have
-already supported this project. Every dollar helps.
-    `}
-</pre>
-<FundComponent changeProgress = {this.changeProgress} currentDonation={this.state.currentDonation}/>
+    <ProgressBar currentDonation={this.state.currentDonation} progressWidth={this.state.progressWidth} totalFund={parseFloat(this.state.totalFund)}/>
+<div className="details"><span className="textImp"><strong>{`
+Only `}{this.state.daysLeft} {`days left `}</strong></span>
+ to fund this project.
+<br/><br/>
+Join the <strong>{this.state.noOfDonors}</strong> other donors who have
+already supported this project. Every dollar helps.<br/><br/>
+</div>
+<FundComponent changeProgress = {this.changeProgress} currentDonation={this.state.currentDonation} totalFund={parseFloat(this.state.totalFund)}/>
     </div>
 		);
 	}

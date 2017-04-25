@@ -10,6 +10,10 @@ class App extends React.Component {
 		return (
 			<div className="mainContainer">
 				<ContentContainer/>
+				<div className="actionsContainer">
+					<button className="save actioButton">Save for later</button>
+					<button className="share actioButton">Tell your friends</button>
+				</div>
 			</div>
 		);
 	}
