@@ -1,0 +1,104 @@
+.mainContainer{
+  position:relative;
+  border:1px solid black;
+  width:40%;
+  margin:auto;
+}
+
+.details{
+  text-align: left;
+  margin-left:10px;
+  width:inherit;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/*.contentArea{
+  text-align: left;
+  margin-left:10px;
+  width: 79%;
+}*/
+.textImp{
+  color: orangered;
+}
+
+.contentContainer{
+  font: 18px Arial, sans-serif;
+  width:80%;
+  color: #696969;
+  border:2px solid #C0C0C0;
+  margin:auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.progressBar{
+  border-bottom: 1px solid #C0C0C0;
+  width:100%;
+  height:15px;
+  position: relative;
+}
+.progress{
+  width:0%;
+  height:15px;
+  background-color: orangered;
+  transition: width 3s;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 270px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 60%;
+    margin-left: -60px;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.progressBar:hover .tooltiptext {
+    visibility: visible;
+}
+
+.fundComponent{
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.fundSubmit{
+  height: 42px;
+  width:45%;
+  margin-left: 10px;
+  border-radius: 5%;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: green;
+  position: relative;
+}
+
+.input-box { position: relative;float: left; width:45%;}
+
+.fundInput { display: block; border: 1px solid #d7d6d6; background: #fff; padding: 10px 10px 10px 20px;width:inherit;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 5%;
+font-size: 16px;}
+
+.unit { position: absolute; display: block; left: 5px; top: 10px; z-index: 9; }
+
+.reason50{
+  color: #00bfff;
+  font-style: italic;
+}
