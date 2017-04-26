@@ -16,6 +16,7 @@ class ContentContainer extends React.Component {
 	}
 
 	changeProgress(fund){
+		console.log(fund);
 		this.setState({currentDonation:parseFloat(this.state.currentDonation)+parseFloat(fund)});
 		this.state.progressWidth=(this.state.progressWidth)+(fund/50);
 }

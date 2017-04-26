@@ -8,7 +8,7 @@
 
 .details{
   text-align: left;
-  margin-left:10px;
+  margin:auto;
   width:inherit;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -63,7 +63,7 @@
   transition: width 3s;
 }
 
-.tooltiptext {
+.progressToolTip {
     visibility: hidden;
     width: 60%;
     background-color: #696969;
@@ -77,7 +77,7 @@
     margin-left: -60px;
 }
 
-.tooltiptext::after {
+.progressToolTip::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -88,31 +88,65 @@
     border-color: #696969 transparent transparent transparent;
 }
 
-.progressBar:hover .tooltiptext {
+.progressBar:hover .progressToolTip {
     visibility: visible;
 }
 
 .fundComponent{
-  margin-left: 10px;
+  margin-left: 10%;
   margin-bottom: 20px;
 }
 .fundSubmit{
   height: 42px;
-  width:45%;
-  margin-left: 10px;
+  width:36%;
+  margin-left: 5%;
   border-radius: 5%;
   color: white;
   font-size: 16px;
   font-weight: bold;
   background-color: green;
   position: relative;
+  margin-right:11%;
+  display: inline-block;
 }
 
-.input-box { position: relative;float: left; width:45%;}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
 
-.fundInput { display: block; border: 1px solid #d7d6d6; background: #fff; padding: 10px 10px 10px 20px;width:inherit;
+.fundSubmit .validate {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.fundSubmit .validate::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+
+.input-box { position: relative;float: left; width:39%;}
+
+.fundInput { display: block; border: 1px solid #d7d6d6; background: #fff; padding: 10px 10px 10px 20px;width:70%;
   height: 20px;
-  margin-right: 10px;
   border-radius: 5%;
 font-size: 16px;
 font-weight: bold;}

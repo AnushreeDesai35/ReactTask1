@@ -12,7 +12,7 @@ class ProgressBar extends React.Component {
 		return (
     <div>
       <div className="progressBar">
-      <div className="tooltiptext">${this.props.totalFund - this.props.currentDonation} still needed for this project</div>
+      <div className="progressToolTip">${this.props.totalFund - this.props.currentDonation} still needed for this project</div>
         <div className="progress" style={style}></div>
       </div>
     </div>
