@@ -38,6 +38,7 @@
 .save{
 }
 .share{
+  float:right;
 }
 .actioButton{
   margin: 0px 2% 5px 2%;

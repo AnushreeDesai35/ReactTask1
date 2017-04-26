@@ -11,7 +11,7 @@ changeProgressWidth(){
 	if(parseFloat(this.refs.fundInput.value) + parseFloat(this.props.currentDonation) > this.props.totalFund || this.refs.fundInput.value === ""){
 		alert("You have entered incorrect value or fund limit exceeded : "+(this.props.totalFund - parseFloat(this.props.currentDonation))+" left to donate.");
 		//this.refs.validationToolTip.style.visibility = "visible";
-		this.refs.validate.style.visibility = "visible";
+		//this.refs.validate.style.visibility = "visible";
 	}
 	else {
 		this.props.changeProgress(parseFloat(this.refs.fundInput.value));
